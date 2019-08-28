@@ -32,7 +32,8 @@
     
 - 新增 table column:
 
-	https://www.postgresql.org/docs/9.1/sql-altertable.html
+  https://www.postgresql.org/docs/9.1/sql-altertable.html
+	
   ```ALTER TABLE table ADD COLUMN col_name text NOT NULL```
     
 - 刪除 table 中特定條件資料:
@@ -64,6 +65,7 @@
 - 設定使用者即可連線IP:
 
 	https://docs.postgresql.tw/server-administration/client-authentication/the-pg_hba.conf-file
+	
   修改 PostgreSQL/data/pg_hba.conf 檔案 (修改完須重啟)
   ```
   # 讓使用者 jack 在不限制 IP 情況下連線
@@ -83,11 +85,13 @@
 - 建立使用者帳號:
     
   ```CREATE USER jack WITH ENCRYPTED PASSWORD 'jamie0618';```
+	
   **建立新帳號後，這帳號預設沒有權限可以對資料庫做任何事，需額外開放權限**
     
 - 設定使用者權限
     
   https://www.postgresql.org/docs/10/sql-grant.html
+	
   ```GRANT SELECT, INSERT ON table TO user;```
     
 - 刪除使用者
