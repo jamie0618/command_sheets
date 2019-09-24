@@ -34,6 +34,10 @@
 
   ```ALTER TABLE table DROP COLUMN col;```
 
+- 重新命名 table column:
+  
+  ```ALTER TABLE table RENAME COLUMN col TO new_col;```
+
 - 新增 table column:
 
   https://www.postgresql.org/docs/9.1/sql-altertable.html
