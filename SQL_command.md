@@ -25,7 +25,13 @@
 - 清空 table: 
 	
   ```TRUNCATE table;```
-    
+- 複製 table (包含格式和資料):
+
+  ```
+  CREATE TABLE new_table AS TABLE table; (包含格式和資料)
+  CREATE TABLE new_table AS TABLE table WITH NO DATA; (只包含格式，不包含資料)
+  ```
+
 - 刪除 table:
 	
   ```DROP TABLE table;```
