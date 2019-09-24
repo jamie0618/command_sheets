@@ -29,7 +29,11 @@
 - 刪除 table:
 	
   ```DROP TABLE table;```
-    
+
+- 刪除 table column:
+
+  ```ALTER TABLE table DROP COLUMN col```
+
 - 新增 table column:
 
   https://www.postgresql.org/docs/9.1/sql-altertable.html
