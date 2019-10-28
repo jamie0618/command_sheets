@@ -73,6 +73,10 @@
 - 看最新 N 筆資料:
 	
   ```SELECT * FROM table ORDER BY col DESC LIMIT n;```
+  
+- 搜尋特定條件:
+
+  ```SELECT * FROM table WHERE col='xxx';```
 
 ## 連線相關
 
