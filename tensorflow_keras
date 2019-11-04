@@ -1,3 +1,9 @@
+# tf
+
+- 
+
+# tf.keras
+
 - 查詢 keras model 總層數:
   ```
   len(model.layers)
