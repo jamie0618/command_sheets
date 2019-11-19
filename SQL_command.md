@@ -77,6 +77,10 @@
 - 搜尋特定條件:
 
   ```SELECT * FROM table WHERE col='xxx';```
+  
+- 搜尋特定 column 中 unique 的值:
+
+  ```SELECT DISTINCT column_1 FROM table;```
 
 ## 連線相關
 
