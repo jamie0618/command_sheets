@@ -14,6 +14,10 @@
 
 ```tmux rename-session -t XXX YYY```
 
+- 刪除 session:
+
+```tmux kill-session -t XXX```
+
 - 跳出 tmux:
 
 ```ctrl+B -> D -> Enter```
