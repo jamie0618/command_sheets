@@ -1,3 +1,8 @@
+- Miniconda 安裝(Linux)
+  - 下載 Miniconda script: https://docs.conda.io/en/latest/miniconda.html
+  - bash 該 script
+  - ```source ~/.bashrc```
+
 - 新增環境
 
 ```
