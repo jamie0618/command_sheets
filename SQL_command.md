@@ -81,6 +81,10 @@
 - 搜尋特定 column 中 unique 的值:
 
   ```SELECT DISTINCT column_1 FROM table;```
+  
+- 從現有 table 複製資料和格式並建立新的 table (注意 primary key 需要重新設定):
+
+  ```CREATE TABLE new_table AS SELECT * FROM old_table WHERE XXX=YYY```
 
 ## 連線相關
 
