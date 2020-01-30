@@ -1,3 +1,9 @@
+- 新增環境
+
+```
+conda create --name XXX python=3.6
+```
+
 - 刪除環境
 
 ```
