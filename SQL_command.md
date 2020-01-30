@@ -11,6 +11,7 @@
 ## 資料格式相關
 
 - 日期
+
    ```WHERE "update_time" < date'2019-01-01'```
 
 ## table 相關
