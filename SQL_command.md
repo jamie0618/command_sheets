@@ -92,6 +92,23 @@
 
   ```CREATE TABLE new_table AS SELECT * FROM old_table WHERE XXX=YYY```
 
+- 刪除特定 column 當中，有重複的 row (每組重複只留下一筆):
+
+  ```DELETE 
+  FROM table
+  WHERE ctid IN 
+  (
+    SELECT ctid 
+    FROM(
+        SELECT 
+            *, 
+            ctid,
+            row_number() OVER (PARTITION BY col ORDER BY ctid) 
+        FROM table
+    )s
+    WHERE row_number >= 2
+  );```
+
 ## 連線相關
 
 - 設定使用者即可連線IP:
