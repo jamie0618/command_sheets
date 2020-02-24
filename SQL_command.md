@@ -95,6 +95,12 @@
 - 對現有 table 加入 ID column:
 
   ```ALTER TABLE table ADD COLUMN col SERIAL;```
+  
+  用了之後該 table 會另外產生一份 sequence，可以在 \d 中看到
+  
+  如果要 RESET 該 sequence:
+  
+  ```ALTER SEQUENCE seq RESTART```
 
 - 刪除特定 column 當中，有重複的 row (每組重複只留下一筆):
 
