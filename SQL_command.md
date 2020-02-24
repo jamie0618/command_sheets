@@ -90,7 +90,11 @@
   
 - 從現有 table 複製資料和格式並建立新的 table (注意 primary key 需要重新設定):
 
-  ```CREATE TABLE new_table AS SELECT * FROM old_table WHERE XXX=YYY```
+  ```CREATE TABLE new_table AS SELECT * FROM old_table WHERE XXX=YYY;```
+  
+- 對現有 table 加入 ID column:
+
+  ```ALTER TABLE table ADD COLUMN col SERIAL;```
 
 - 刪除特定 column 當中，有重複的 row (每組重複只留下一筆):
 
