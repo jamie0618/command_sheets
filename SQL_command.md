@@ -71,6 +71,10 @@
 - 更改 column 名字:
 	
   ```ALTER TABLE table RENAME col_name TO new_col_name;```
+  
+- 更改資料內容:
+
+  ```UPDATE table SET col='XXX' WHERE condition```
 
 - 查詢某 table 總共資料筆數:
 	
