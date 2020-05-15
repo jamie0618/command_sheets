@@ -67,6 +67,9 @@ server {
     listen 1234; # 用 http 聽 port 1234
     listen 443 ssl default_server; # 用 https 聽 port 443
 
+    # 預設上限為 1MB
+    client_max_body_size 100M;
+
     # ssl 檔案路徑
     ssl_certificate /etc/nginx/ssl/nginx.crt;
     ssl_certificate_key /etc/nginx/ssl/nginx.key;
