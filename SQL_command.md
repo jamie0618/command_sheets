@@ -8,6 +8,12 @@
 
   ```\c XXX```
 
+## 連線相關
+
+- 查詢連線數量及狀態
+
+  ```SELECT count(*),state FROM pg_stat_activity GROUP BY 2;```
+
 ## 資料格式相關
 
 - 日期
