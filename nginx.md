@@ -57,32 +57,120 @@ sudo service nginx reload
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
 ```
 
-# 設定 Nginx configuration
+# Nginx configuration
 
-1. 在 /etc/bginx/sites-enabled 底下建立檔案
-2. 檔案內寫入以下內容
+1. 在 /etc/bginx/sites-enabled 底下建立檔案 (Ex: sudo vim XXX)
+2. 寫入 configuration
+3. 儲存後 sudo nginx -t 確認 configuration 內容
+4. sudo service nginx reload 重新載入 configuration
+
+# Nginx configuration參數
+
+## server 相關
+
+寫在 server {} 內，每行結尾記得加分號 
 
 ```
 server {
-    listen 1234; # 用 http 聽 port 1234
-    listen 443 ssl default_server; # 用 https 聽 port 443
+    ...
+}
+```
 
-    # 預設上限為 1MB
-    client_max_body_size 100M;
+- 設定聽哪個 port，如果要用 https 後面要加上 ssl
 
-    # ssl 檔案路徑
-    ssl_certificate /etc/nginx/ssl/nginx.crt;
-    ssl_certificate_key /etc/nginx/ssl/nginx.key;
+```
+listen 5000; # 聽 port 5000
+listen 443 ssl; # 用 https 聽 port 443
+```
 
-    location / {
+- 設定要處理哪個 domain name
+
+```
+server_name XXX.XXX.com
+```
+
+- 設定 request body 最大大小，預設為 1 MB
+
+```
+client_max_body_size 100M;
+```
+
+- 設定 ssl 檔案路徑
+
+```
+ssl_certificate /path/to/.crt;
+ssl_certificate_key /path/to/.key;
+```
+
+- proxy 
+
+```
+location / {
         proxy_set_header   X-Forwarded-For $remote_addr;
         proxy_set_header   Host $http_host;
         proxy_pass         "http://127.0.0.1:5000"; # 要 redirect 到的位置
     }
+```
+
+- 封鎖所有 IP 連線
+
+```
+deny all;
+```
+
+- 新增 IP 白名單
+
+```
+allow 111.111.111.0/24;
+```
+
+也可以將所有的 allow 寫在一個 .conf 當中，並於 server {} 中 include
+
+```
+include /path/to/XXX.conf;
+```
+
+## 範例
+
+網站 A 架設於 port 5000，網站 B 架設於 port 8000
+將 https request (port 443) 根據 domain name 轉向兩個網站
+並限制只有在 allow.conf 中有加入的 IP 才可以訪問
+
+```
+server {
+    listen 443 ssl; 
+    ssl_certificate /path/to/.crt;
+    ssl_certificate_key /path/to/.key;
+
+    server_name A;
+
+    include /path/to/allow.conf;
+    deny all;
+
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         "http://127.0.0.1:5000";
+    }
+}
+server {
+    listen 443 ssl; 
+    ssl_certificate /path/to/.crt;
+    ssl_certificate_key /path/to/.key;
+
+    server_name B;
+
+    include /path/to/allow.conf;
+    deny all;
+
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $http_host;
+        proxy_pass         "http://127.0.0.1:8000"; 
+    }
 }
 ```
 
-3. 儲存後重啟 Nginx 即可，之後傳送到該 IP port 1234 (using HTTP) 的請求，以及用 https 傳送 (default 443) 的請求都會被轉送給 port 5000 的 application
 
 
 
