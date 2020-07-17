@@ -127,6 +127,7 @@ allow 111.111.111.0/24;
 也可以將所有的 allow 寫在一個 .conf 當中，並於 server {} 中 include
 
 ```
+# AWS 放在 /etc/nginx/https-allow 底下
 include /path/to/XXX.conf;
 ```
 
