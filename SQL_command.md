@@ -93,7 +93,11 @@
 - 搜尋特定條件:
 
   ```SELECT * FROM table WHERE col='xxx';```
-  
+
+- 搜尋 datetime 欄位:
+
+  ```SELECT * FROM table WHERE col > '2020-07-24 10:00:00.000'```
+
 - 搜尋特定 column 中 unique 的值:
 
   ```SELECT DISTINCT column_1 FROM table;```
