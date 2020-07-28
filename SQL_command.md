@@ -13,6 +13,10 @@
 - 查詢連線數量及狀態
 
   ```SELECT count(*),state FROM pg_stat_activity GROUP BY 2;```
+  
+- 查詢 idle timeout 時間
+
+  ```show idle_in_transaction_session_timeout;```
 
 ## 資料格式相關
 
