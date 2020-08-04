@@ -27,3 +27,20 @@
   ```
   npm run serve
   ```
+
+# Vue.cli 專案架構
+
+```
+project/
+  |--- node_modules/ (用來放 npm 下載管理的 modules)
+  |--- public/
+        |--- index.html (SPA 只有一個 html 檔案，由 webpack 幫忙載入所有的元件)
+        |--- (全域圖片，無法依照 moudule 的，甚至是要在 web-applicaiton 起來之前就要使用的圖片，如 favicon) 
+  |--- src/ (主要的程式碼)
+        |--- assets/ (會由 webpack 處理的資源)
+                |--- (例如網站中會用到的圖片)
+        |--- components/ (Vue 元件，XXX.vue 放這)
+                |--- ....
+        |--- main.js (app 入口檔案，初始化 Vue 以及載入 Vue 元件)
+        |--- App.vue (main app 元件)
+```
