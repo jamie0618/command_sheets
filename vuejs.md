@@ -16,7 +16,7 @@
   ```
   npm install -g vue/cli
   vue --version
-  ```
+  ```  
   
 4. 在 cmd 執行下列指令建立 vue 專案，輸入後選項 "Install vue-router" 記得選 Y
   ```
@@ -28,3 +28,7 @@
   npm run dev
   ```
 
+6. (Optional) 執行以下指令安裝 bootstrap-vue
+  ```
+  npm install bootstrap-vue boostrap
+  ```
