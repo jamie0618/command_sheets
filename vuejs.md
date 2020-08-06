@@ -28,7 +28,12 @@
   npm run dev
   ```
 
-6. (Optional) 執行以下指令安裝 bootstrap-vue
+6. 執行以下指令安裝 bootstrap-vue
   ```
   npm install bootstrap-vue boostrap
+  ```
+  
+7. 執行以下指令安裝 axios
+  ```
+  npm install axios vue-axios --save
   ```
