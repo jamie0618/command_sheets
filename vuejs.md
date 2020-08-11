@@ -37,3 +37,8 @@
   ```
   npm install axios vue-axios --save
   ```
+
+8. 執行以下指令安裝 moment
+  ```
+  npm install moment --save
+  ```
