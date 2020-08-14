@@ -131,6 +131,20 @@ allow 111.111.111.0/24;
 include /path/to/XXX.conf;
 ```
 
+- http 轉 https
+
+```
+# 把所有 http 導向 https
+server {
+    listen 80; 
+    listen [::]:80;
+ 
+    server_name XXX;
+ 
+    rewrite ^ https://XXX$request_uri? permanent;
+}
+```
+
 ## 範例
 
 網站 A 架設於 port 5000，網站 B 架設於 port 8000
