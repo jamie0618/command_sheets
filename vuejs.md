@@ -42,3 +42,8 @@
   ```
   npm install moment --save
   ```
+  
+9. 123
+  ```
+  npm install vue-chartjs chart.js --save
+  ```
