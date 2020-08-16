@@ -14,7 +14,7 @@
 
 3. 在 cmd 執行下列指令安裝 vue.cli，並確認是否成功安裝
   ```
-  npm install -g @vue/cli
+  npm install -g @vue/cli @vue/cli-init
   vue --version
   ```  
   
