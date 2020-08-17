@@ -47,3 +47,8 @@
   ```
   npm install vue-chartjs chart.js --save
   ```
+
+10. (optional) 執行以下指令安裝 leaflet (openstreet 地圖使用)
+  ```
+  npm install leaflet
+  ```
