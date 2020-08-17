@@ -28,22 +28,22 @@
   npm run dev
   ```
 
-6. 執行以下指令安裝 bootstrap-vue
+6. (optional) 執行以下指令安裝 bootstrap-vue (用 boostrap)
   ```
   npm install bootstrap-vue boostrap
   ```
   
-7. 執行以下指令安裝 axios
+7. (optional) 執行以下指令安裝 axios (送 request)
   ```
   npm install axios vue-axios --save
   ```
 
-8. 執行以下指令安裝 moment
+8. (optional) 執行以下指令安裝 moment (處理時間格式)
   ```
   npm install moment --save
   ```
   
-9. 123
+9. (optional) 執行以下指令安裝 chart.js (畫圖表)
   ```
   npm install vue-chartjs chart.js --save
   ```
