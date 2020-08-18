@@ -52,3 +52,13 @@
   ```
   npm install leaflet
   ```
+
+11. (optional) 執行以下指令安裝 leaflet-ant-path (leaflet 路徑動畫 plugin)
+  ```
+  npm install leaflet-ant-path --save
+  ```
+  
+12. (optional) 執行以下指令安裝 leaflet time dimension (leaflet 時間軸 plugin)
+  ```
+  npm install leaflet-timedimension --save
+  ```
