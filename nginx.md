@@ -95,6 +95,17 @@ server_name XXX.XXX.com
 client_max_body_size 100M;
 ```
 
+- 讓外部連結(Excel/Word等)可以讀到 cookie 的設定
+
+https://stackoverflow.com/questions/2653626/why-are-cookies-unrecognized-when-a-link-is-clicked-from-an-external-source-i-e/55631734#55631734
+
+```
+# 放在 server 中
+if ($http_user_agent ~* Word|Excel|PowerPoint|ms-office) {
+    return 200 '<html><head><meta http-equiv="refresh" content="0"/></head><body></body></html>';
+}
+```
+
 - 設定 ssl 檔案路徑
 
 ```
