@@ -66,4 +66,5 @@
 13. 
   ```
   npm i vue-sidebar-menu --save
+  npm i --save @fortawesome/vue-fontawesome@3
   ```
