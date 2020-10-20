@@ -62,3 +62,8 @@
   ```
   npm install leaflet-timedimension --save
   ```
+
+13. 
+  ```
+  npm i vue-sidebar-menu --save
+  ```
