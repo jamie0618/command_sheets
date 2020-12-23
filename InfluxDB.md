@@ -134,6 +134,24 @@ InfluxDB 裡儲存的資料稱為時間序列資料。資料包括:
 - point: 
   - 相同 time、相同 series 的 field，是唯一存在的(同一個時間點，相同的 series，只會存在一筆資料)
 
+# Python InfluxDB 套件
+
+https://github.com/influxdata/influxdb-python
+
+## 安裝
+
+```
+pip install influxdb
+```
+
+## 使用
+
+```
+from influxdb import InfluxDBClient
+
+client = InfluxDBClient(host='127.0.0.1', port=8086, username='XX', password='YY', database='ZZ')
+```
+
 # Reference
 
 https://jasper-zhang1.gitbooks.io/influxdb/content/Introduction/getting_start.html
