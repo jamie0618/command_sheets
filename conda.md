@@ -1,5 +1,6 @@
 - Miniconda 安裝(Linux)
   - 下載 Miniconda script: https://docs.conda.io/en/latest/miniconda.html
+  - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   - bash 該 script
   - ```source ~/.bashrc```
 
