@@ -8,6 +8,7 @@ https://stackoverflow.com/questions/47208466/sslerrorbad-handshake-when-trying-t
 # Nginx 安裝
 
 ```
+sudo apt-get update 
 sudo apt-get install nginx
 ```
 
