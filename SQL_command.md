@@ -137,6 +137,14 @@
     WHERE row_number >= 2
   );```
 
+- 搜尋 PSQL JSONB 欄位中，key是否存在
+
+  ```
+  SELECT ... WHERE json_column ? 'key_name';
+  SELECT ... WHERE json_column -> 'key_name' ? 'sub_key_name';  (nested json key)
+  ```
+
+
 ## 連線相關
 
 - 設定使用者即可連線IP:
