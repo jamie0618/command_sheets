@@ -144,6 +144,12 @@
   SELECT ... WHERE json_column -> 'key_name' ? 'sub_key_name';  (nested json key)
   ```
 
+- 查詢 & 更新 JSONB 欄位
+
+  ```
+  UPDATE ... SET json_column = json_column::jsonb || '{"key1":"new_value"}'
+  WHERE (json_column->>'key2')::int > 30;
+  ```
 
 ## 連線相關
 
