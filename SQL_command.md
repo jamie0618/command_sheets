@@ -150,6 +150,15 @@
   UPDATE ... SET json_column = json_column::jsonb || '{"key1":"new_value"}'
   WHERE (json_column->>'key2')::int > 30;
   ```
+  
+- 查詢 nested JSONB 欄位
+
+  ```
+  SELECT * FROM sensor_status_20220518
+  WHERE sensor_status -> 'camera' ? '2'
+  AND (sensor_status->'camera'->'2'->>'recording')::int=0;
+  ```
+  
 
 ## 連線相關
 
